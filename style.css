@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.555), rgb(0, 0, 0));
+    height: 100vh;
+    width: 100%;
+}
+
+section {
+    background: url('/stars1.png');
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    text-align: center;
+}
+
+ul:hover li a {
+    opacity: 0;
+}
+
+ul li {
+    list-style: none;
+    margin: 14px 0;
+
+}
+
+ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background-color: blue;
+    padding: 6px 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: inline-block;
+    width: 120%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+
+}
+
+ul li a:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    background-color: cadetblue;
+    opacity: 1;
+}
+
+ul li::after {
+    content: attr(data-text);
+    color: aliceblue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: 900;
+    opacity: 0;
+    text-transform: uppercase;
+    pointer-events: none;
+    letter-spacing: 50px;
+}
+ul li:hover:after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+ul li::before{
+    content: '';
+    width: 180px;
+    height: 80px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,70%);
+    -webkit-transform: translate(-50%,70%);
+    -moz-transform: translate(-50%,70%);
+    -ms-transform: translate(-50%,70%);
+    -o-transform: translate(-50%,70%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 80px orangered;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.9s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+ul li:hover::before{
+    opacity: 0.5;
+    width: 80px;
+
+}
